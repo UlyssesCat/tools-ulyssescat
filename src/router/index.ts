@@ -3,25 +3,20 @@
 import { createRouter, createWebHashHistory } from 'vue-router'
 
 // 引入文件，动态路由
-const Home = () => import("@/views/Home.vue");
-const About = () => import("@/views/About.vue");
-const NotFound = () => import("@/views/NotFound.vue");
+const Default = () => import("@/views/Home.vue");
+const MD5 = () => import("@/views/md5.vue");
+
 
 const routes = [
     {
         path: "/",
-        name: "Home",
-        component: Home,
+        name: "Default",
+        component: Default,
     },
     {
-        path: "/About",
-        name: "About",
-        component: About,
-    },
-    {
-        path: "/:pathMatch(.*)*", // 代替vue2的通配符path: "*",
-        name: "NotFound",
-        component: NotFound,
+        path: "/MD5",
+        name: "MD5",
+        component: MD5,
     },
 ];
 
